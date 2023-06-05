@@ -1,8 +1,8 @@
-import time 
-import mouse 
-import keyboard
+from time import sleep
+from mouse import click
+from keyboard import add_hotkey
 from config import *
-from funk import *
+from funk import clicker, trigg, bindfirst
 
 print("hello! is new clientfor minecraft development by gibel team ")
 print("our functions are: ")
@@ -11,21 +11,18 @@ print("2.bind")
 print("3.clicker")
 
 while True:
-        isCliking = False
-        clicker()
+    isCliking = False
+    clicker()
 
-        trigg()
+    trigg()
 
-        bindfirst()
+    bindfirst()
 
-        keyboard.add_hotkey(hotKeycliker, clicker)
-        keyboard.add_hotkey(hotKeyBind1, bindfirst)
-        keyboard.add_hotkey(hotKeyTriger, trigg)
-        while True:
-            if isCliking:
-                print("start pushing (clicker bot[ON])")
-                mouse.click(button= 'left')
-                time.sleep(delay)
-
-
-
+    keyboard.add_hotkey(hotKeycliker, clicker)
+    keyboard.add_hotkey(hotKeyBind1, bindfirst)
+    keyboard.add_hotkey(hotKeyTriger, trigg)
+    while True:
+        if isCliking:
+            print("start pushing (clicker bot[ON])")
+            mouse.click(button="left")
+            time.sleep(delay)
